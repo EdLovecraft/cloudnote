@@ -1,0 +1,13 @@
+name = "cloudnote"
+main = "src/index.js"
+compatibility_date = "2025-12-01"
+
+# 创建 KV 命名空间后填入 ID：
+# npx wrangler kv namespace create NOTES
+[[kv_namespaces]]
+binding = "NOTES"
+id = "<YOUR_KV_NAMESPACE_ID>"
+
+# 密码保护（可选）：
+# npx wrangler secret put PASSWORD
+
