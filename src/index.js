@@ -795,7 +795,22 @@ foreColorPicker.addEventListener('input', function() {
 
 hiliteColorBtn.addEventListener('mousedown', function(e) { e.preventDefault(); saveSelection(); });
 hiliteColorBtn.addEventListener('click', function() {
-  restoreSelection(); document.execCommand('hiliteColor', false, hiliteColorPicker.value); scheduleSave();
+  restoreSelection();
+  var sel = window.getSelection();
+  var node = sel.rangeCount ? sel.focusNode : null;
+  if (node && node.nodeType === 3) node = node.parentNode;
+  var hasBg = false;
+  while (node && node !== contentEditor) {
+    var bg = window.getComputedStyle(node).backgroundColor;
+    if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') { hasBg = true; break; }
+    node = node.parentNode;
+  }
+  if (hasBg) {
+    document.execCommand('hiliteColor', false, 'transparent');
+  } else {
+    document.execCommand('hiliteColor', false, hiliteColorPicker.value);
+  }
+  scheduleSave();
 });
 hilitePickerBtn.addEventListener('mousedown', function(e) { e.preventDefault(); saveSelection(); });
 hilitePickerBtn.addEventListener('click', function() { hiliteColorPicker.click(); });
