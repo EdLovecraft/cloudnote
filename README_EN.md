@@ -6,6 +6,8 @@ A lightweight cloud notepad based on Cloudflare Workers + KV. No server needed â
 
 ![Screenshot](Screenshot.png)
 
+![Screenshot](Screenshot2.png)
+
 ## Features
 
 - **Rich Text Editing** â€” Bold, italic, underline, strikethrough, font color, highlight, alignment, ordered/unordered lists
