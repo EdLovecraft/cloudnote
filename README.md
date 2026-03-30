@@ -6,6 +6,8 @@
 
 ![Screenshot](Screenshot.png)
 
+![Screenshot](Screenshot2.png)
+
 ## 功能
 
 - **富文本编辑** — 加粗、斜体、下划线、删除线、字体颜色、高亮、对齐方式、有序/无序列表
