@@ -1,6 +1,10 @@
 # Cloudnote
 
+[English](README_EN.md)
+
 基于 Cloudflare Workers + KV 的轻量级云端记事本。无需服务器，部署在 Cloudflare 全球边缘网络，访问速度快、零维护成本。
+
+![Screenshot](Screenshot.png)
 
 ## 功能
 
@@ -26,7 +30,7 @@
 1. **克隆项目**
 
 ```bash
-git clone https://github.com/你的用户名/cloudnote.git
+git clone https://github.com/EdLovecraft/cloudnote.git
 cd cloudnote
 npm install
 ```
