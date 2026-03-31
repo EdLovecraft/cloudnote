@@ -156,7 +156,7 @@ main { display: flex; flex: 1; overflow: hidden; }
 .back-btn { display: none; width: 36px; height: 36px; border: none; border-radius: var(--radius); background: transparent; font-size: 20px; cursor: pointer; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent); }
 .title-input { flex: 1; border: none; outline: none; font-size: 18px; font-weight: 600; font-family: var(--font); background: transparent; color: var(--text); min-height: 36px; }
 .title-input::placeholder { color: var(--text-light); }
-.toolbar { display: flex; align-items: center; gap: 2px; padding: 6px 12px; border-bottom: 1px solid var(--border); background: var(--bg-sidebar); flex-shrink: 0; overflow: visible; position: relative; z-index: 10; }
+.toolbar { display: flex; align-items: center; gap: 2px; padding: 6px 12px; border-bottom: 1px solid var(--border); background: var(--bg-sidebar); flex-shrink: 0; overflow-x: auto; overflow-y: visible; position: relative; z-index: 10; -webkit-overflow-scrolling: touch; }
 .toolbar::-webkit-scrollbar { height: 0; }
 .toolbar button { width: 32px; height: 32px; border: none; border-radius: 4px; background: transparent; cursor: pointer; font-size: 14px; color: var(--text); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font); transition: background 0.1s; }
 .toolbar button:hover { background: var(--bg-hover); }
